@@ -8,6 +8,9 @@
 
 #include "cr_file.h"
 
+#ifndef _WIN32
+#include "assert.h"
+#endif
 
 CR_SYSTEM_API CR_SYSTEM_INLINE int cr_file_open(const char * filepath)
 {

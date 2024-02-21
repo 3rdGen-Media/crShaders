@@ -1,11 +1,12 @@
 
-#include <crSystem/cr_file.h>
+#include "crSystem/cr_file.h"
 
 #include <stdlib.h>
 #include <stdio.h>
 
 #ifndef _WIN32
 #define _mkdir(X) mkdir(X, 0700)
+#include <assert.h>
 #else
 #include <direct.h> //_mkdir
 #endif

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70696152B85C9710029DF08 /* cr_file.c in Sources */ = {isa = PBXBuildFile; fileRef = C70696142B85C8FF0029DF08 /* cr_file.c */; };
 		C7175ED02B84A90F006B5291 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C7175EC22B84A6E6006B5291 /* main.c */; };
 		C7175ED42B84AFF0006B5291 /* atm_MS.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1022B821A6A00D9E2D7 /* atm_MS.metal */; };
-		C7175ED72B84B51B006B5291 /* libcrSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7175ED22B84AEEA006B5291 /* libcrSystem.a */; };
 		C74860762B820AFD00D9C08F /* cr_gbuffer.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7CE26A12B3FCB170065740C /* cr_gbuffer.metal */; };
 		C74860782B820AFD00D9C08F /* cr_environment.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F57B332B5C655C0029A514 /* cr_environment.metal */; };
 		C74860792B820AFD00D9C08F /* cr_mesh_vbo.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7E817932212E9B000AF5C10 /* cr_mesh_vbo.metal */; };
@@ -30,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70696132B85C8FF0029DF08 /* cr_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cr_file.h; sourceTree = "<group>"; };
+		C70696142B85C8FF0029DF08 /* cr_file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cr_file.c; sourceTree = "<group>"; };
 		C7175EC22B84A6E6006B5291 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		C7175EC92B84A8D4006B5291 /* crShaders-GLSL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "crShaders-GLSL"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7175ED22B84AEEA006B5291 /* libcrSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcrSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,13 +88,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7175ED72B84B51B006B5291 /* libcrSystem.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C70696122B85C8FF0029DF08 /* crSystem */ = {
+			isa = PBXGroup;
+			children = (
+				C70696132B85C8FF0029DF08 /* cr_file.h */,
+				C70696142B85C8FF0029DF08 /* cr_file.c */,
+			);
+			path = crSystem;
+			sourceTree = "<group>";
+		};
 		C7175ED12B84AEEA006B5291 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		C7E8177F2212E96B00AF5C10 = {
 			isa = PBXGroup;
 			children = (
+				C70696122B85C8FF0029DF08 /* crSystem */,
 				C7E817902212E9B000AF5C10 /* crShader.h */,
 				C7175EC22B84A6E6006B5291 /* main.c */,
 				C7E817912212E9B000AF5C10 /* crShaders */,
@@ -405,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70696152B85C9710029DF08 /* cr_file.c in Sources */,
 				C7175ED02B84A90F006B5291 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,7 +638,7 @@
 				DEVELOPMENT_TEAM = ECP6D49SS3;
 				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_HEADER_SEARCH_PATHS = ../include;
+				MTL_HEADER_SEARCH_PATHS = "./ ../include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -638,7 +650,7 @@
 				DEVELOPMENT_TEAM = ECP6D49SS3;
 				HEADER_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_HEADER_SEARCH_PATHS = ../include;
+				MTL_HEADER_SEARCH_PATHS = "./ ../include";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
