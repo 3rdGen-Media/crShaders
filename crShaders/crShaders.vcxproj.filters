@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="crShaders">
+      <UniqueIdentifier>{5ba77b00-8950-4d40-8a62-e49bdbb47f5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl">
+      <UniqueIdentifier>{bc1ac0b5-c378-4f9a-b804-79285a5ca035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\metal">
+      <UniqueIdentifier>{d486432f-07dd-4922-bda0-83a51565e072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\hlsl">
+      <UniqueIdentifier>{166ca471-b303-41eb-9e15-74a3ddb2dfbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es2">
+      <UniqueIdentifier>{a935332f-a04a-4bfc-bac7-c54dc90a7a7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es3">
+      <UniqueIdentifier>{de79ec4a-7d8b-46f4-97fb-8418fe927439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es2\Scene">
+      <UniqueIdentifier>{f960a175-8898-4775-99d0-9acc5d67dc12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es2\Environnment">
+      <UniqueIdentifier>{959428b5-f4a5-4fe8-8c76-74e9353d6b4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es3\Environment">
+      <UniqueIdentifier>{2fcab976-3595-422f-b27f-4fd60e6b486f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\glsl\es3\Scene">
+      <UniqueIdentifier>{10a3d2fc-7a75-4900-8500-918e60affa39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\hlsl\Environment">
+      <UniqueIdentifier>{b65e9271-5bb5-45ea-bafd-06f6e998e094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\hlsl\Scene">
+      <UniqueIdentifier>{cef36de7-4dc3-4a05-90b8-ef9d11cb3bcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\metal\Scene">
+      <UniqueIdentifier>{1e9b1c1f-d2a6-46d5-bce3-277aaad2bb62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\metal\Environment">
+      <UniqueIdentifier>{c4cddb9f-a4f9-4363-9f2f-cb598876b6a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crShaders\Source Files">
+      <UniqueIdentifier>{e6bfeb45-77cc-4068-a767-52735897b056}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crShader.h" />
+    <ClInclude Include="crShaders\cr_atm_params.glsl">
+      <Filter>crShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="crShaders\cr_sky_atmosphere.h">
+      <Filter>crShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="crShaders\atm_MS.h">
+      <Filter>crShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="crShaders\atm_T.h">
+      <Filter>crShaders</Filter>
+    </ClInclude>
+    <ClInclude Include="crShaders\hlsl\atm_T.hlsl">
+      <Filter>crShaders\hlsl</Filter>
+    </ClInclude>
+    <ClInclude Include="crShaders\hlsl\atm_MS.hlsl">
+      <Filter>crShaders\hlsl</Filter>
+    </ClInclude>
+    <ClInclude Include="crSystem\cr_file.h">
+      <Filter>crShaders\Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="crShaders\glsl\CompileAsBytecode.bat">
+      <Filter>crShaders\glsl\es3</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_atm_scattering.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Environnment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_atm_sky_view.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Environnment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_atm_transmittance.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Environnment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_environment.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Environnment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_environment.es2.vert.glsl">
+      <Filter>crShaders\glsl\es2\Environnment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_mesh_vbo.es2.vert.glsl">
+      <Filter>crShaders\glsl\es2\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_mesh_vbo.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_gbuffer.es2.frag.glsl">
+      <Filter>crShaders\glsl\es2\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_gbuffer.es2.vert.glsl">
+      <Filter>crShaders\glsl\es2\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_mesh_vbo.es3.vert.glsl">
+      <Filter>crShaders\glsl\es3\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_mesh_vbo.es3.frag.glsl">
+      <Filter>crShaders\glsl\es3\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_gbuffer.es3.vert.glsl">
+      <Filter>crShaders\glsl\es3\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_gbuffer.es3.frag.glsl">
+      <Filter>crShaders\glsl\es3\Scene</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_environment.es3.frag.glsl">
+      <Filter>crShaders\glsl\es3\Environment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_environment.es3.vert.glsl">
+      <Filter>crShaders\glsl\es3\Environment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_atm_transmittance.es3.frag.glsl">
+      <Filter>crShaders\glsl\es3\Environment</Filter>
+    </None>
+    <None Include="crShaders\glsl\cr_atm_sky_view.es3.frag.glsl">
+      <Filter>crShaders\glsl\es3\Environment</Filter>
+    </None>
+    <None Include="crShaders\cr_atm_functions.glsl">
+      <Filter>crShaders</Filter>
+    </None>
+    <None Include="crShaders\metal\atm_MS.metal">
+      <Filter>crShaders\metal</Filter>
+    </None>
+    <None Include="crShaders\metal\atm_T.metal">
+      <Filter>crShaders\metal</Filter>
+    </None>
+    <None Include="crShaders\metal\MtlShaderInterface.metal">
+      <Filter>crShaders\metal</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_mesh_vbo.metal">
+      <Filter>crShaders\metal\Scene</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_gbuffer.metal">
+      <Filter>crShaders\metal\Scene</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_environment.metal">
+      <Filter>crShaders\metal\Environment</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_atm_transmittance.metal">
+      <Filter>crShaders\metal\Environment</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_atm_sky_view.metal">
+      <Filter>crShaders\metal\Environment</Filter>
+    </None>
+    <None Include="crShaders\metal\cr_atm_scattering.metal">
+      <Filter>crShaders\metal\Environment</Filter>
+    </None>
+    <None Include="crShaders\glsl\atm_T.glsl">
+      <Filter>crShaders\glsl</Filter>
+    </None>
+    <None Include="crShaders\glsl\atm_MS.glsl">
+      <Filter>crShaders\glsl</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_environment.frag.hlsl">
+      <Filter>crShaders\hlsl\Environment</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_environment.vert.hlsl">
+      <Filter>crShaders\hlsl\Environment</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_gbuffer.frag.hlsl">
+      <Filter>crShaders\hlsl\Scene</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_gbuffer.vert.hlsl">
+      <Filter>crShaders\hlsl\Scene</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_mesh_vbo.frag.hlsl">
+      <Filter>crShaders\hlsl\Scene</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_mesh_vbo.vert.hlsl">
+      <Filter>crShaders\hlsl\Scene</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_transmittance.frag.hlsl">
+      <Filter>crShaders\hlsl\Environment</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_sky_view.frag.hlsl">
+      <Filter>crShaders\hlsl\Environment</Filter>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_scattering.frag.hlsl">
+      <Filter>crShaders\hlsl\Environment</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>crShaders\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crSystem\cr_file.c">
+      <Filter>crShaders\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

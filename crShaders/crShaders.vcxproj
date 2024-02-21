@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86558429-BD51-408D-8C40-217890A120CF}</ProjectGuid>
+    <RootNamespace>crShaders</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\x64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\x64\</OutDir>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\include\CoreRender\crShaders mkdir ..\include\CoreRender\crShaders
+copy .\crShaders\crgc_vbo.h ..\include\CoreRender\crShaders
+copy .\crShaders\glsl ..\include\CoreRender\crShaders
+copy .\crShaders\metal ..\include\CoreRender\crShaders
+copy .\crShader.h ..\include\CoreRender</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\;..\include;..\include\CoreRender;$(VLD_DIR)\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\lib\x64;$(VLD_DIR)\lib\Win64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\include\CoreRender\crShaders mkdir ..\include\CoreRender\crShaders
+if not exist ..\include\CoreRender\crShaders\glsl mkdir ..\include\CoreRender\crShaders\glsl
+if not exist ..\include\CoreRender\crShaders\hlsl mkdir ..\include\CoreRender\crShaders\hlsl
+if not exist ..\include\CoreRender\crShaders\metal mkdir ..\include\CoreRender\crShaders\metal
+del .\crShaders\glsl\*
+START /WAIT cmd /c .\crShaders\glsl\PreprocessGLSL.bat
+START /WAIT cmd /c .\crShaders\glsl\CompileAsBytecode.bat
+copy .\crShaders\glsl\preprocessed\* ..\include\CoreRender\crShaders\glsl
+copy .\crShaders\hlsl\* ..\include\CoreRender\crShaders\hlsl
+copy .\crShaders\metal\* ..\include\CoreRender\crShaders\metal
+copy .\crShader.h ..\include\CoreRender
+copy .\crShaders\*.h ..\include\CoreRender\crShaders
+copy .\crShaders\*.glsl ..\include\CoreRender\crShaders</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\include\CoreRender\crShaders mkdir ..\include\CoreRender\crShaders
+copy .\crShaders\crgc_vbo.h ..\include\CoreRender\crShaders
+copy .\crShaders\glsl ..\include\CoreRender\crShaders
+copy .\crShaders\metal ..\include\CoreRender\crShaders
+copy .\crShader.h ..\include\CoreRender</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\;..\include;..\include\CoreRender;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\lib\x64;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>if not exist ..\include\CoreRender\crShaders mkdir ..\include\CoreRender\crShaders
+if not exist ..\include\CoreRender\crShaders\glsl mkdir ..\include\CoreRender\crShaders\glsl
+if not exist ..\include\CoreRender\crShaders\hlsl mkdir ..\include\CoreRender\crShaders\hlsl
+if not exist ..\include\CoreRender\crShaders\metal mkdir ..\include\CoreRender\crShaders\metal
+del .\crShaders\glsl\*
+START /WAIT cmd /c .\crShaders\glsl\PreprocessGLSL.bat
+START /WAIT cmd /c .\crShaders\glsl\CompileAsBytecode.bat
+copy .\crShaders\glsl\preprocessed\* ..\include\CoreRender\crShaders\glsl
+copy .\crShaders\hlsl\* ..\include\CoreRender\crShaders\hlsl
+copy .\crShaders\metal\* ..\include\CoreRender\crShaders\metal
+copy .\crShader.h ..\include\CoreRender
+copy .\crShaders\*.h ..\include\CoreRender\crShaders
+copy .\crShaders\*.glsl ..\include\CoreRender\crShaders</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="crShader.h" />
+    <ClInclude Include="crShaders\atm_MS.h" />
+    <ClInclude Include="crShaders\atm_T.h" />
+    <ClInclude Include="crShaders\cr_atm_params.glsl" />
+    <ClInclude Include="crShaders\cr_sky_atmosphere.h" />
+    <ClInclude Include="crSystem\cr_file.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="crShaders\cr_atm_functions.glsl" />
+    <None Include="crShaders\glsl\atm_MS.glsl" />
+    <None Include="crShaders\glsl\atm_T.glsl" />
+    <None Include="crShaders\glsl\CompileAsBytecode.bat" />
+    <None Include="crShaders\glsl\cr_atm_scattering.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_atm_sky_view.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_atm_sky_view.es3.frag.glsl" />
+    <None Include="crShaders\glsl\cr_atm_transmittance.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_atm_transmittance.es3.frag.glsl" />
+    <None Include="crShaders\glsl\cr_environment.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_environment.es2.vert.glsl" />
+    <None Include="crShaders\glsl\cr_environment.es3.frag.glsl" />
+    <None Include="crShaders\glsl\cr_environment.es3.vert.glsl" />
+    <None Include="crShaders\glsl\cr_gbuffer.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_gbuffer.es2.vert.glsl" />
+    <None Include="crShaders\glsl\cr_gbuffer.es3.frag.glsl" />
+    <None Include="crShaders\glsl\cr_gbuffer.es3.vert.glsl" />
+    <None Include="crShaders\glsl\cr_mesh_vbo.es2.frag.glsl" />
+    <None Include="crShaders\glsl\cr_mesh_vbo.es2.vert.glsl" />
+    <None Include="crShaders\glsl\cr_mesh_vbo.es3.frag.glsl" />
+    <None Include="crShaders\glsl\cr_mesh_vbo.es3.vert.glsl" />
+    <CustomBuild Include="crShaders\hlsl\cr_environment.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_environment.frag.cso .\crShaders\hlsl\cr_environment.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_environment.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_environment.frag.cso .\crShaders\hlsl\cr_environment.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_environment.frag.cso</Outputs>
+    </CustomBuild>
+    <None Include="crShaders\metal\atm_MS.metal" />
+    <None Include="crShaders\metal\atm_T.metal" />
+    <None Include="crShaders\metal\cr_atm_scattering.metal" />
+    <None Include="crShaders\metal\cr_atm_sky_view.metal" />
+    <None Include="crShaders\metal\cr_atm_transmittance.metal" />
+    <None Include="crShaders\metal\cr_environment.metal" />
+    <None Include="crShaders\metal\cr_gbuffer.metal" />
+    <None Include="crShaders\metal\cr_mesh_vbo.metal" />
+    <None Include="crShaders\metal\MtlShaderInterface.metal" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_mesh_vbo.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_mesh_vbo.frag.cso .\crShaders\hlsl\cr_mesh_vbo.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_mesh_vbo.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_mesh_vbo.frag.cso .\crShaders\hlsl\cr_mesh_vbo.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_mesh_vbo.frag.cso</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_mesh_vbo.vert.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_mesh_vbo.vert.cso .\crShaders\hlsl\cr_mesh_vbo.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_mesh_vbo.vert.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_mesh_vbo.vert.cso .\crShaders\hlsl\cr_mesh_vbo.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_mesh_vbo.vert.cso</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_gbuffer.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_gbuffer.frag.cso .\crShaders\hlsl\cr_gbuffer.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_gbuffer.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_gbuffer.frag.cso .\crShaders\hlsl\cr_gbuffer.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_gbuffer.frag.cso</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="crShaders\hlsl\cr_gbuffer.vert.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_gbuffer.vert.cso .\crShaders\hlsl\cr_gbuffer.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_gbuffer.vert.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_gbuffer.vert.cso .\crShaders\hlsl\cr_gbuffer.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_gbuffer.vert.cso</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_environment.vert.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_environment.vert.cso .\crShaders\hlsl\cr_environment.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_environment.vert.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T vs_6_4 /Fo .\crShaders\hlsl\cr_environment.vert.cso .\crShaders\hlsl\cr_environment.vert.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_environment.vert.cso</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crShaders\hlsl\atm_T.hlsl">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_transmittance.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_transmittance.frag.cso .\crShaders\hlsl\cr_atm_transmittance.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_atm_transmittance.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_transmittance.frag.cso .\crShaders\hlsl\cr_atm_transmittance.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_atm_transmittance.frag.cso</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_sky_view.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_sky_view.frag.cso .\crShaders\hlsl\cr_atm_sky_view.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_atm_sky_view.frag.cso</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_atm_sky_view.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_sky_view.frag.cso .\crShaders\hlsl\cr_atm_sky_view.frag.hlsl</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="crShaders\hlsl\atm_MS.hlsl">
+      <FileType>Document</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="crShaders\hlsl\cr_atm_scattering.frag.hlsl">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_scattering.frag.cso .\crShaders\hlsl\cr_atm_scattering.frag.hlsl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\crShaders\hlsl\cr_atm_scattering.frag.cso</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\crShaders\hlsl\cr_atm_scattering.frag.cso</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">dxc.exe /T ps_6_4 /Fo .\crShaders\hlsl\cr_atm_scattering.frag.cso .\crShaders\hlsl\cr_atm_scattering.frag.hlsl</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="crSystem\cr_file.c" />
+    <ClCompile Include="main.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7175ED02B84A90F006B5291 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C7175EC22B84A6E6006B5291 /* main.c */; };
+		C7175ED42B84AFF0006B5291 /* atm_MS.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1022B821A6A00D9E2D7 /* atm_MS.metal */; };
+		C7175ED72B84B51B006B5291 /* libcrSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7175ED22B84AEEA006B5291 /* libcrSystem.a */; };
+		C74860762B820AFD00D9C08F /* cr_gbuffer.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7CE26A12B3FCB170065740C /* cr_gbuffer.metal */; };
+		C74860782B820AFD00D9C08F /* cr_environment.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F57B332B5C655C0029A514 /* cr_environment.metal */; };
+		C74860792B820AFD00D9C08F /* cr_mesh_vbo.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7E817932212E9B000AF5C10 /* cr_mesh_vbo.metal */; };
+		C781F1012B821A5100D9E2D7 /* atm_T.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1002B821A5100D9E2D7 /* atm_T.metal */; };
+		C781F1032B821A6A00D9E2D7 /* atm_MS.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1022B821A6A00D9E2D7 /* atm_MS.metal */; };
+		C781F1272B821BEC00D9E2D7 /* cr_atm_transmittance.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1262B821BEC00D9E2D7 /* cr_atm_transmittance.metal */; };
+		C781F1292B82206A00D9E2D7 /* MtlShaderInterface.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1282B82206A00D9E2D7 /* MtlShaderInterface.metal */; };
+		C781F12A2B8220B800D9E2D7 /* MtlShaderInterface.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1282B82206A00D9E2D7 /* MtlShaderInterface.metal */; };
+		C781F12C2B822BE700D9E2D7 /* atm_T.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1002B821A5100D9E2D7 /* atm_T.metal */; };
+		C781F12E2B82683B00D9E2D7 /* cr_atm_sky_view.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F12D2B82683B00D9E2D7 /* cr_atm_sky_view.metal */; };
+		C781F12F2B826E8000D9E2D7 /* cr_atm_sky_view.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F12D2B82683B00D9E2D7 /* cr_atm_sky_view.metal */; };
+		C781F1302B826E9100D9E2D7 /* cr_atm_transmittance.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1262B821BEC00D9E2D7 /* cr_atm_transmittance.metal */; };
+		C781F1322B834FD400D9E2D7 /* cr_atm_scattering.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1312B834FD400D9E2D7 /* cr_atm_scattering.metal */; };
+		C781F1332B834FD400D9E2D7 /* cr_atm_scattering.metal in Sources */ = {isa = PBXBuildFile; fileRef = C781F1312B834FD400D9E2D7 /* cr_atm_scattering.metal */; };
+		C7CE26A22B3FCB170065740C /* cr_gbuffer.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7CE26A12B3FCB170065740C /* cr_gbuffer.metal */; };
+		C7E8179C2212E9B000AF5C10 /* cr_mesh_vbo.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7E817932212E9B000AF5C10 /* cr_mesh_vbo.metal */; };
+		C7F57B342B5C655C0029A514 /* cr_environment.metal in Sources */ = {isa = PBXBuildFile; fileRef = C7F57B332B5C655C0029A514 /* cr_environment.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C7175EC22B84A6E6006B5291 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C7175EC92B84A8D4006B5291 /* crShaders-GLSL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "crShaders-GLSL"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7175ED22B84AEEA006B5291 /* libcrSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcrSystem.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C71A66D42B34389200E9BE77 /* cr_gbuffer.es2.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.es2.vert.glsl; sourceTree = "<group>"; };
+		C71A66D52B34389200E9BE77 /* cr_gbuffer.es3.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.es3.vert.glsl; sourceTree = "<group>"; };
+		C71A66D62B34389200E9BE77 /* cr_mesh_vbo.es3.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.es3.vert.glsl; sourceTree = "<group>"; };
+		C71A66D72B34389200E9BE77 /* cr_gbuffer.es3.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.es3.frag.glsl; sourceTree = "<group>"; };
+		C71A66D82B34389300E9BE77 /* cr_gbuffer.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.es2.frag.glsl; sourceTree = "<group>"; };
+		C71A66D92B34389300E9BE77 /* cr_mesh_vbo.es3.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.es3.frag.glsl; sourceTree = "<group>"; };
+		C74860522B8193FA00D9C08F /* cr_atm_transmittance.es3.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_transmittance.es3.frag.glsl; sourceTree = "<group>"; };
+		C74860532B8193FA00D9C08F /* cr_environment.es3.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.es3.frag.glsl; sourceTree = "<group>"; };
+		C74860542B8193FA00D9C08F /* cr_environment.es3.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.es3.vert.glsl; sourceTree = "<group>"; };
+		C74860552B8193FA00D9C08F /* cr_atm_transmittance.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_transmittance.es2.frag.glsl; sourceTree = "<group>"; };
+		C74860562B8193FA00D9C08F /* cr_atm_sky_view.es3.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_sky_view.es3.frag.glsl; sourceTree = "<group>"; };
+		C74860592B81944200D9C08F /* cr_atm_scattering.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_scattering.es2.frag.glsl; sourceTree = "<group>"; };
+		C748605A2B81944200D9C08F /* cr_atm_sky_view.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_sky_view.es2.frag.glsl; sourceTree = "<group>"; };
+		C748605F2B819B2200D9C08F /* cr_atm_params.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_params.glsl; sourceTree = "<group>"; };
+		C74860602B819B2200D9C08F /* cr_sky_atmosphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cr_sky_atmosphere.h; sourceTree = "<group>"; };
+		C74860612B819B2200D9C08F /* cr_atm_functions.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_functions.glsl; sourceTree = "<group>"; };
+		C74860622B81DA2700D9C08F /* MtlShaderInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MtlShaderInterface.h; path = crShaders/MtlShaderInterface.h; sourceTree = SOURCE_ROOT; };
+		C748607E2B820AFD00D9C08F /* crShaders-iOS.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = "crShaders-iOS.metallib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C781F1002B821A5100D9E2D7 /* atm_T.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = atm_T.metal; sourceTree = "<group>"; };
+		C781F1022B821A6A00D9E2D7 /* atm_MS.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = atm_MS.metal; sourceTree = "<group>"; };
+		C781F1042B821AB600D9E2D7 /* atm_T.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atm_T.h; sourceTree = "<group>"; };
+		C781F1052B821ACC00D9E2D7 /* atm_MS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = atm_MS.h; sourceTree = "<group>"; };
+		C781F1072B821AF000D9E2D7 /* cr_mesh_vbo.vert.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.vert.hlsl; sourceTree = "<group>"; };
+		C781F1082B821AF000D9E2D7 /* atm_T.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = atm_T.hlsl; sourceTree = "<group>"; };
+		C781F1132B821AF000D9E2D7 /* cr_gbuffer.vert.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.vert.hlsl; sourceTree = "<group>"; };
+		C781F1142B821AF000D9E2D7 /* cr_atm_sky_view.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_sky_view.frag.hlsl; sourceTree = "<group>"; };
+		C781F1152B821AF000D9E2D7 /* cr_environment.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.frag.hlsl; sourceTree = "<group>"; };
+		C781F1182B821AF000D9E2D7 /* cr_atm_transmittance.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_transmittance.frag.hlsl; sourceTree = "<group>"; };
+		C781F1192B821AF000D9E2D7 /* cr_gbuffer.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_gbuffer.frag.hlsl; sourceTree = "<group>"; };
+		C781F11A2B821AF000D9E2D7 /* cr_environment.vert.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.vert.hlsl; sourceTree = "<group>"; };
+		C781F11B2B821AF000D9E2D7 /* cr_atm_scattering.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_atm_scattering.frag.hlsl; sourceTree = "<group>"; };
+		C781F11E2B821AF000D9E2D7 /* cr_mesh_vbo.frag.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.frag.hlsl; sourceTree = "<group>"; };
+		C781F1222B821AF000D9E2D7 /* atm_MS.hlsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = atm_MS.hlsl; sourceTree = "<group>"; };
+		C781F1262B821BEC00D9E2D7 /* cr_atm_transmittance.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cr_atm_transmittance.metal; sourceTree = "<group>"; };
+		C781F1282B82206A00D9E2D7 /* MtlShaderInterface.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MtlShaderInterface.metal; sourceTree = "<group>"; };
+		C781F12D2B82683B00D9E2D7 /* cr_atm_sky_view.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cr_atm_sky_view.metal; sourceTree = "<group>"; };
+		C781F1312B834FD400D9E2D7 /* cr_atm_scattering.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cr_atm_scattering.metal; sourceTree = "<group>"; };
+		C7CE26A12B3FCB170065740C /* cr_gbuffer.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cr_gbuffer.metal; sourceTree = "<group>"; };
+		C7E817862212E96B00AF5C10 /* crShaders-OSX.metallib */ = {isa = PBXFileReference; explicitFileType = "archive.metal-library"; includeInIndex = 0; path = "crShaders-OSX.metallib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7E817902212E9B000AF5C10 /* crShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crShader.h; sourceTree = "<group>"; };
+		C7E817932212E9B000AF5C10 /* cr_mesh_vbo.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = cr_mesh_vbo.metal; sourceTree = "<group>"; };
+		C7E817962212E9B000AF5C10 /* cr_mesh_vbo.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.es2.frag.glsl; sourceTree = "<group>"; };
+		C7E8179A2212E9B000AF5C10 /* cr_mesh_vbo.es2.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_mesh_vbo.es2.vert.glsl; sourceTree = "<group>"; };
+		C7F57B332B5C655C0029A514 /* cr_environment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = cr_environment.metal; sourceTree = "<group>"; };
+		C7F57B352B5D30110029A514 /* cr_environment.es2.frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.es2.frag.glsl; sourceTree = "<group>"; };
+		C7F57B362B5D30110029A514 /* cr_environment.es2.vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cr_environment.es2.vert.glsl; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7175EC62B84A8D4006B5291 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7175ED72B84B51B006B5291 /* libcrSystem.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7175ED12B84AEEA006B5291 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7175ED22B84AEEA006B5291 /* libcrSystem.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C748604F2B81936700D9C08F /* es2 */ = {
+			isa = PBXGroup;
+			children = (
+				C748605B2B81944E00D9C08F /* Environment */,
+				C748605C2B81945C00D9C08F /* Scene */,
+			);
+			name = es2;
+			sourceTree = "<group>";
+		};
+		C74860512B8193C700D9C08F /* es3 */ = {
+			isa = PBXGroup;
+			children = (
+				C74860582B81940400D9C08F /* Environment */,
+				C74860572B8193FE00D9C08F /* Scene */,
+			);
+			name = es3;
+			sourceTree = "<group>";
+		};
+		C74860572B8193FE00D9C08F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C71A66D92B34389300E9BE77 /* cr_mesh_vbo.es3.frag.glsl */,
+				C71A66D62B34389200E9BE77 /* cr_mesh_vbo.es3.vert.glsl */,
+				C71A66D72B34389200E9BE77 /* cr_gbuffer.es3.frag.glsl */,
+				C71A66D52B34389200E9BE77 /* cr_gbuffer.es3.vert.glsl */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C74860582B81940400D9C08F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				C74860562B8193FA00D9C08F /* cr_atm_sky_view.es3.frag.glsl */,
+				C74860522B8193FA00D9C08F /* cr_atm_transmittance.es3.frag.glsl */,
+				C74860532B8193FA00D9C08F /* cr_environment.es3.frag.glsl */,
+				C74860542B8193FA00D9C08F /* cr_environment.es3.vert.glsl */,
+			);
+			name = Environment;
+			sourceTree = "<group>";
+		};
+		C748605B2B81944E00D9C08F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				C74860552B8193FA00D9C08F /* cr_atm_transmittance.es2.frag.glsl */,
+				C74860592B81944200D9C08F /* cr_atm_scattering.es2.frag.glsl */,
+				C748605A2B81944200D9C08F /* cr_atm_sky_view.es2.frag.glsl */,
+				C7F57B352B5D30110029A514 /* cr_environment.es2.frag.glsl */,
+				C7F57B362B5D30110029A514 /* cr_environment.es2.vert.glsl */,
+			);
+			name = Environment;
+			sourceTree = "<group>";
+		};
+		C748605C2B81945C00D9C08F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C7E817962212E9B000AF5C10 /* cr_mesh_vbo.es2.frag.glsl */,
+				C7E8179A2212E9B000AF5C10 /* cr_mesh_vbo.es2.vert.glsl */,
+				C71A66D82B34389300E9BE77 /* cr_gbuffer.es2.frag.glsl */,
+				C71A66D42B34389200E9BE77 /* cr_gbuffer.es2.vert.glsl */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C74860642B81DD5F00D9C08F /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C7E817932212E9B000AF5C10 /* cr_mesh_vbo.metal */,
+				C7CE26A12B3FCB170065740C /* cr_gbuffer.metal */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C74860652B81DD6600D9C08F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1262B821BEC00D9E2D7 /* cr_atm_transmittance.metal */,
+				C781F1312B834FD400D9E2D7 /* cr_atm_scattering.metal */,
+				C781F12D2B82683B00D9E2D7 /* cr_atm_sky_view.metal */,
+				C7F57B332B5C655C0029A514 /* cr_environment.metal */,
+			);
+			name = Environment;
+			sourceTree = "<group>";
+		};
+		C781F1062B821AF000D9E2D7 /* hlsl */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1082B821AF000D9E2D7 /* atm_T.hlsl */,
+				C781F1222B821AF000D9E2D7 /* atm_MS.hlsl */,
+				C781F1242B821B4B00D9E2D7 /* Environment */,
+				C781F1252B821B5700D9E2D7 /* Scene */,
+			);
+			path = hlsl;
+			sourceTree = "<group>";
+		};
+		C781F1242B821B4B00D9E2D7 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1182B821AF000D9E2D7 /* cr_atm_transmittance.frag.hlsl */,
+				C781F11B2B821AF000D9E2D7 /* cr_atm_scattering.frag.hlsl */,
+				C781F1142B821AF000D9E2D7 /* cr_atm_sky_view.frag.hlsl */,
+				C781F11A2B821AF000D9E2D7 /* cr_environment.vert.hlsl */,
+				C781F1152B821AF000D9E2D7 /* cr_environment.frag.hlsl */,
+			);
+			name = Environment;
+			sourceTree = "<group>";
+		};
+		C781F1252B821B5700D9E2D7 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1072B821AF000D9E2D7 /* cr_mesh_vbo.vert.hlsl */,
+				C781F11E2B821AF000D9E2D7 /* cr_mesh_vbo.frag.hlsl */,
+				C781F1132B821AF000D9E2D7 /* cr_gbuffer.vert.hlsl */,
+				C781F1192B821AF000D9E2D7 /* cr_gbuffer.frag.hlsl */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		C7E8177F2212E96B00AF5C10 = {
+			isa = PBXGroup;
+			children = (
+				C7E817902212E9B000AF5C10 /* crShader.h */,
+				C7175EC22B84A6E6006B5291 /* main.c */,
+				C7E817912212E9B000AF5C10 /* crShaders */,
+				C7E817872212E96B00AF5C10 /* Products */,
+				C7175ED12B84AEEA006B5291 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C7E817872212E96B00AF5C10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7E817862212E96B00AF5C10 /* crShaders-OSX.metallib */,
+				C748607E2B820AFD00D9C08F /* crShaders-iOS.metallib */,
+				C7175EC92B84A8D4006B5291 /* crShaders-GLSL */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7E817912212E9B000AF5C10 /* crShaders */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1042B821AB600D9E2D7 /* atm_T.h */,
+				C781F1052B821ACC00D9E2D7 /* atm_MS.h */,
+				C74860602B819B2200D9C08F /* cr_sky_atmosphere.h */,
+				C74860612B819B2200D9C08F /* cr_atm_functions.glsl */,
+				C748605F2B819B2200D9C08F /* cr_atm_params.glsl */,
+				C74860622B81DA2700D9C08F /* MtlShaderInterface.h */,
+				C7E817952212E9B000AF5C10 /* glsl */,
+				C781F1062B821AF000D9E2D7 /* hlsl */,
+				C7E817922212E9B000AF5C10 /* metal */,
+			);
+			path = crShaders;
+			sourceTree = "<group>";
+		};
+		C7E817922212E9B000AF5C10 /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				C781F1002B821A5100D9E2D7 /* atm_T.metal */,
+				C781F1022B821A6A00D9E2D7 /* atm_MS.metal */,
+				C781F1282B82206A00D9E2D7 /* MtlShaderInterface.metal */,
+				C74860652B81DD6600D9C08F /* Environment */,
+				C74860642B81DD5F00D9C08F /* Scene */,
+			);
+			path = metal;
+			sourceTree = "<group>";
+		};
+		C7E817952212E9B000AF5C10 /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				C748604F2B81936700D9C08F /* es2 */,
+				C74860512B8193C700D9C08F /* es3 */,
+			);
+			path = glsl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7175EC82B84A8D4006B5291 /* crShaders-GLSL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7175ECD2B84A8D4006B5291 /* Build configuration list for PBXNativeTarget "crShaders-GLSL" */;
+			buildPhases = (
+				C7175EC52B84A8D4006B5291 /* Sources */,
+				C7175EC62B84A8D4006B5291 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "crShaders-GLSL";
+			productName = "crShaders-GLSL";
+			productReference = C7175EC92B84A8D4006B5291 /* crShaders-GLSL */;
+			productType = "com.apple.product-type.tool";
+		};
+		C74860742B820AFD00D9C08F /* crShaders-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C748607B2B820AFD00D9C08F /* Build configuration list for PBXNativeTarget "crShaders-iOS" */;
+			buildPhases = (
+				C74860752B820AFD00D9C08F /* Sources */,
+				C748607A2B820AFD00D9C08F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "crShaders-iOS";
+			productName = crShaders;
+			productReference = C748607E2B820AFD00D9C08F /* crShaders-iOS.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
+		C7E817852212E96B00AF5C10 /* crShaders-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7E8178D2212E96B00AF5C10 /* Build configuration list for PBXNativeTarget "crShaders-OSX" */;
+			buildPhases = (
+				C7E817842212E96B00AF5C10 /* Sources */,
+				C7175EE72B84CDBF006B5291 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "crShaders-OSX";
+			productName = crShaders;
+			productReference = C7E817862212E96B00AF5C10 /* crShaders-OSX.metallib */;
+			productType = "com.apple.product-type.metal-library";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7E817802212E96B00AF5C10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					New,
+				);
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Abstract Embedded";
+				TargetAttributes = {
+					C7175EC82B84A8D4006B5291 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					C7E817852212E96B00AF5C10 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C7E817832212E96B00AF5C10 /* Build configuration list for PBXProject "crShaders" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C7E8177F2212E96B00AF5C10;
+			productRefGroup = C7E817872212E96B00AF5C10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7E817852212E96B00AF5C10 /* crShaders-OSX */,
+				C74860742B820AFD00D9C08F /* crShaders-iOS */,
+				C7175EC82B84A8D4006B5291 /* crShaders-GLSL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7175EE72B84CDBF006B5291 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#use mkdir -p option to create install dirs if they don't exist\nmkdir -p ../include/CoreRender/crShaders\nmkdir -p ../include/CoreRender/crShaders/glsl\nmkdir -p ../include/CoreRender/crShaders/hlsl\nmkdir -p ../include/CoreRender/crShaders/metal\n\n#run glsl preprocessing application for each glsl source file \n#mkdir -p ../include/CoreRender/crShaders/glsl/preprocessed;\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_gbuffer.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_gbuffer.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_mesh_vbo.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_mesh_vbo.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_environment.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_environment.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_transmittance.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_scattering.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_sky_view.es2.frag.glsl\n\n#cp -rvf ./crShaders/crgc_vbo.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/MtlShaderInterface.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_sky_atmosphere.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_atm_params.glsl ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_atm_functions.glsl ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/glsl/preprocessed/ ../include/CoreRender/crShaders/glsl/\ncp -rvf ./crShaders/metal/ ../include/CoreRender/crShaders/metal\ncp -rvf ./crShaders/*.h ../include/CoreRender/crShaders/\n\n#find ./crUtils '.h' -exec cp -vuni '{}' \"../include/CoreRender/crUtils\" \";\"\ncp -rvf crShader.h ../include/CoreRender/\n\ncp -rvf $TARGET_BUILD_DIR/crShaders-OSX.metallib ./crShaders/metal/\n";
+		};
+		C748607A2B820AFD00D9C08F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#use mkdir -p option to create install dirs if they don't exist\nmkdir -p ../include/CoreRender/crShaders\nmkdir -p ../include/CoreRender/crShaders/glsl\nmkdir -p ../include/CoreRender/crShaders/hlsl\nmkdir -p ../include/CoreRender/crShaders/metal\n\n#run glsl preprocessing application for each glsl source file \n#mkdir -p ../include/CoreRender/crShaders/glsl/preprocessed;\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_gbuffer.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_gbuffer.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_mesh_vbo.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_mesh_vbo.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_environment.es2.vert.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_environment.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_transmittance.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_scattering.es2.frag.glsl\n#$TARGET_BUILD_DIR/./crShaders-GLSL ./crShaders/glsl/cr_atm_sky_view.es2.frag.glsl\n\n#cp -rvf ./crShaders/crgc_vbo.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/MtlShaderInterface.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_sky_atmosphere.h ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_atm_params.glsl ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/cr_atm_functions.glsl ../include/CoreRender/crShaders/\n#cp -rvf ./crShaders/glsl/preprocessed/ ../include/CoreRender/crShaders/glsl/\ncp -rvf ./crShaders/metal/ ../include/CoreRender/crShaders/metal\ncp -rvf ./crShaders/*.h ../include/CoreRender/crShaders/\n\n#find ./crUtils '.h' -exec cp -vuni '{}' \"../include/CoreRender/crUtils\" \";\"\ncp -rvf crShader.h ../include/CoreRender/\n\ncp -rvf $TARGET_BUILD_DIR/crShaders-iOS.metallib ./crShaders/metal/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7175EC52B84A8D4006B5291 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7175ED02B84A90F006B5291 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C74860752B820AFD00D9C08F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7175ED42B84AFF0006B5291 /* atm_MS.metal in Sources */,
+				C781F1302B826E9100D9E2D7 /* cr_atm_transmittance.metal in Sources */,
+				C781F1332B834FD400D9E2D7 /* cr_atm_scattering.metal in Sources */,
+				C781F12F2B826E8000D9E2D7 /* cr_atm_sky_view.metal in Sources */,
+				C781F12C2B822BE700D9E2D7 /* atm_T.metal in Sources */,
+				C781F12A2B8220B800D9E2D7 /* MtlShaderInterface.metal in Sources */,
+				C74860762B820AFD00D9C08F /* cr_gbuffer.metal in Sources */,
+				C74860782B820AFD00D9C08F /* cr_environment.metal in Sources */,
+				C74860792B820AFD00D9C08F /* cr_mesh_vbo.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7E817842212E96B00AF5C10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C781F1012B821A5100D9E2D7 /* atm_T.metal in Sources */,
+				C781F1272B821BEC00D9E2D7 /* cr_atm_transmittance.metal in Sources */,
+				C7CE26A22B3FCB170065740C /* cr_gbuffer.metal in Sources */,
+				C781F1292B82206A00D9E2D7 /* MtlShaderInterface.metal in Sources */,
+				C781F12E2B82683B00D9E2D7 /* cr_atm_sky_view.metal in Sources */,
+				C781F1322B834FD400D9E2D7 /* cr_atm_scattering.metal in Sources */,
+				C781F1032B821A6A00D9E2D7 /* atm_MS.metal in Sources */,
+				C7F57B342B5C655C0029A514 /* cr_environment.metal in Sources */,
+				C7E8179C2212E9B000AF5C10 /* cr_mesh_vbo.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7175ECE2B84A8D4006B5291 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../include,
+					../include/CoreRender,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7175ECF2B84A8D4006B5291 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../include,
+					../include/CoreRender,
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C748607C2B820AFD00D9C08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = ../include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C748607D2B820AFD00D9C08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = ../include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		C7E8178B2212E96B00AF5C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C7E8178C2212E96B00AF5C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C7E8178E2212E96B00AF5C10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = ../include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C7E8178F2212E96B00AF5C10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ECP6D49SS3;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_HEADER_SEARCH_PATHS = ../include;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7175ECD2B84A8D4006B5291 /* Build configuration list for PBXNativeTarget "crShaders-GLSL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7175ECE2B84A8D4006B5291 /* Debug */,
+				C7175ECF2B84A8D4006B5291 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C748607B2B820AFD00D9C08F /* Build configuration list for PBXNativeTarget "crShaders-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C748607C2B820AFD00D9C08F /* Debug */,
+				C748607D2B820AFD00D9C08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7E817832212E96B00AF5C10 /* Build configuration list for PBXProject "crShaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E8178B2212E96B00AF5C10 /* Debug */,
+				C7E8178C2212E96B00AF5C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7E8178D2212E96B00AF5C10 /* Build configuration list for PBXNativeTarget "crShaders-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7E8178E2212E96B00AF5C10 /* Debug */,
+				C7E8178F2212E96B00AF5C10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7E817802212E96B00AF5C10 /* Project object */;
+}
