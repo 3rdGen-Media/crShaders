@@ -8,7 +8,7 @@ crShaders/main.c generates a cmd line application that accepts paths to (.glsl) 
 
 Only .glsl shaders require preprocessing because .hlsl and .metal shaders provide native support for header includes without explicitly enabling via an extension.
 
-#### Compilation
+#### Offline Compilation
 
 Preprocessed .glsl files are compiled to .spv, .hlsl files are compiled to .cso, and .metal files are compiled to a shared .metallib in place.
 
