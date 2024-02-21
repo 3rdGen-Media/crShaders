@@ -1,6 +1,6 @@
 ## crShaders
 
-crShaders is a project meant to be included directly in a Visual Studio solution or Xcode workspace to preprocess, compile then copy final output to a desired install location when you initiate build/run.  It demonstrates how to maintain congruent shader source across GLSL, HLSL, SPIR-V and Metal Shaders using definitions in shared header includes. 
+crShaders is a project meant to be included directly in a Visual Studio solution or Xcode workspace to preprocess, compile then copy final output to a desired install location when you initiate build/run.  It demonstrates how to maintain congruent shader source consumed by OpenGL, Vulkan, Direct3D and Metal APIs using definitions in shared header includes. 
 
 #### Preprocessing
 
