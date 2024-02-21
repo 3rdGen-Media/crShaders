@@ -14,4 +14,4 @@ Preprocessed .glsl files are compiled to .spv, .hlsl files are compiled to .cso,
 
 #### Packaging
 
-After preprocessing and compilation the outputs of those stages are copied to the output location specified via post-build scripts.
+After preprocessing and compilation, the outputs of those stages are copied to the output location specified via post-build scripts (eg /include/CoreRender/crShaders).
